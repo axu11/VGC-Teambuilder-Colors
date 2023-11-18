@@ -13,6 +13,8 @@ var observer = new MutationObserver(function(mutations) {
            var graphSpan = graphColEl.querySelector(`div:nth-child(${i}) > em > span`);
            if(graphSpan) {
              graphSpan.style.background = `hsl(${hue}, 85%, 45%`;
+             graphSpan.style.border = `hsl(${hue}, 85%, 35%`;
+             graphSpan.style.width = `${hue*0.909589 + 22.4953}px`
            } else {
              console.log("cant get individual graph");
            }
@@ -50,7 +52,6 @@ function getNewHueList(statsList) {
   var level = document.querySelector("#room-teambuilder > div > div.teamchartbox.individual > ol > li > div.setchart > div.setcol.setcol-details > div:nth-child(1) > div > button > span.detailcell.detailcell-first");
   if(level) {
     for(var i = 0; i < statsList.length; i++) {
-      console.log(level.textContent);
       hueList.push(statToHue(level.textContent, statsList[i]));
     }
     return hueList;
