@@ -1,21 +1,20 @@
 {
-    "manifest_version": 2,
-    "name": "My Extension",
-    "version": "1.0",
-    "description": "A brief description of your extension",
-    "permissions": ["activeTab"],
-    "browser_action": {
-      "default_icon": "colors.png",
-      "default_title": "Click me!"
-    },
-    "icons": {
-      "48": "colors.png"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ]
-  }
-  
+  "manifest_version": 3,
+  "name": "OM Teambuilder Colors",
+  "version": "1.0",
+  "description": "Edits stat bars in teambuilder to reflect levels 5 and 50",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "OM Teambuilder Colors"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
