@@ -1,19 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "OM Teambuilder Colors",
-  "version": "1.0.0",
+  "name": "VGC Teambuilder Colors",
+  "version": "1.0.1",
   "description": "Edits stat bars in teambuilder to reflect levels 5 and 50",
   "permissions": ["activeTab"],
   "action": {
     "default_icon": "icon.png",
-    "default_title": "OM Teambuilder Colors"
+    "default_title": "VGC Teambuilder Colors"
   },
   "icons": {
     "48": "icon.png"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://play.pokemonshowdown.com/teambuilder"],
       "js": ["content.js"]
     }
   ]
