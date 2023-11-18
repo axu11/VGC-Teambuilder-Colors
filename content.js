@@ -47,12 +47,23 @@ function getStatsList() {
 
 function getNewHueList(statsList) {
   var hueList = [];
-  for(var i = 0; i < statsList.length; i++) {
-    hueList.push(statToHue(statsList[i]));
+  var level = document.querySelector("#room-teambuilder > div > div.teamchartbox.individual > ol > li > div.setchart > div.setcol.setcol-details > div:nth-child(1) > div > button > span.detailcell.detailcell-first");
+  if(level) {
+    for(var i = 0; i < statsList.length; i++) {
+      console.log(level.textContent);
+      hueList.push(statToHue(level.textContent, statsList[i]));
+    }
+    return hueList;
+  } else {
+    console.log("cant get level");
   }
-  return hueList;
 }
 
-function statToHue(stat) {
-    return (stat*0.498263) - 0.673852;
+function statToHue(level, stat) {
+  if (level == "Level50")
+    return stat*0.498263 - 0.673852;
+  else if(level == "Level5")
+    return stat*4.26824 - 12.0816;
+  else
+    return stat*0.252552 - 0.370239;
 }
