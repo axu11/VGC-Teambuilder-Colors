@@ -1,5 +1,4 @@
 var observer = new MutationObserver(function(mutations) {
-  console.log("in here");
   mutations.forEach(function(mutation) {
      var statsList = getStatsList();
      if(statsList) {
