@@ -1,9 +1,8 @@
 {
   "manifest_version": 3,
   "name": "VGC Teambuilder Colors",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Edits stat bars in teambuilder to reflect levels 5 and 50",
-  "permissions": ["activeTab"],
   "action": {
     "default_icon": "icon.png",
     "default_title": "VGC Teambuilder Colors"
